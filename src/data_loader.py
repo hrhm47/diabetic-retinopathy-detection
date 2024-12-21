@@ -1,10 +1,19 @@
+#       a) Fine-tune a pretrained model using the DeepDRiD dataset. (5 points) 
+
+
+
+
 import os
 import torch
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
 
+
+# ========== preparing the dataset ============
+
+
 # Define paths
-data_dir = "./data/raw/DeepDRiD"
+data_dir = "./data/raw/DeepDRiD/"
 train_dir = os.path.join(data_dir, "train")
 val_dir = os.path.join(data_dir, "val")
 test_dir = os.path.join(data_dir, "test")
@@ -35,6 +44,12 @@ val_loader = DataLoader(val_dataset, batch_size=32, shuffle=False)
 test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
 
 # Check dataset details
-print(f"Train dataset size: {len(train_dataset)}")
-print(f"Validation dataset size: {len(val_dataset)}")
-print(f"Test dataset size: {len(test_dataset)}")
+print("\n\n       dataset details ")
+print(f"\nTrain dataset size: {len(train_dataset)}")
+print(f"\nValidation dataset size: {len(val_dataset)}")
+print(f"\nTest dataset size: {len(test_dataset)}\n")
+
+
+
+
+#  ==== Loading and Fine-Tuning a Pretrained Model ===========
