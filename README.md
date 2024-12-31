@@ -34,7 +34,7 @@ The project uses deep convolutional neural networks (CNNs) to predict the severi
 Clone this repository and install the required dependencies:
 
 ```bash
-git clone https://github.com/yourusername/deepdrid.git
+git clone https://github.com/hrhm47/diabetic-retinopathy-detection/master
 cd deepdrid
 pip install -r requirements.txt
 ```
@@ -46,17 +46,17 @@ Make sure you have a working GPU (CUDA-enabled) if you plan to train models. The
 The dataset consists of retina images with labels indicating the severity of diabetic retinopathy. The dataset should be structured as follows:
 
 ```
-/data
-    /train
-        image1.jpg
-        image2.jpg
-        ...
-    /val
-        image1.jpg
-        image2.jpg
-        ...
-    train.csv
-    val.csv
+/data/raw/DeepDRiD/train
+                        /1/
+                        1_l1.jpg
+                        1_l2.jpg
+                        ...
+                    /val
+                        265_l1.jpg
+                        265_l2.jpg
+                        ...
+        train.csv
+        val.csv
 ```
 
 ### CSV File Structure
