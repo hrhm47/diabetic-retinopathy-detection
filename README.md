@@ -31,7 +31,7 @@ The project uses deep convolutional neural networks (CNNs) to predict the severi
 Clone this repository and install the required dependencies:
 
 ```bash
-git clone https://github.com/hrhm47/diabetic-retinopathy-detection/master
+git clone https:/github.com/hrhm47/diabetic-retinopathy-detection/master
 cd deepdrid
 pip install -r requirements.txt
 ```
