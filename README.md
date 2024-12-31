@@ -1,6 +1,3 @@
-Here's a sample README for your project:
-
----
 
 # DeepDRiD: Deep Learning for Diabetic Retinopathy Image Classification
 
