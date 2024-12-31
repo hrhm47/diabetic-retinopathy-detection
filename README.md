@@ -46,15 +46,16 @@ Make sure you have a working GPU (CUDA-enabled) if you plan to train models. The
 The dataset consists of retina images with labels indicating the severity of diabetic retinopathy. The dataset should be structured as follows:
 
 ```
-/data/raw/DeepDRiD/train
-                        /1/
-                        1_l1.jpg
-                        1_l2.jpg
-                        ...
-                    /val
-                        265_l1.jpg
-                        265_l2.jpg
-                        ...
+/data/raw/DeepDRiD/train/
+                        1/
+                          1_l1.jpg
+                          1_l2.jpg
+                          ...
+                    /val/
+                        265/
+                          265_l1.jpg
+                          265_l2.jpg
+                          ...
         train.csv
         val.csv
 ```
@@ -83,42 +84,19 @@ This will:
 - Perform ensemble learning (max voting and weighted average).
 - Save the ensemble results in `ensemble_results.json`.
 
-### Visualizing Training Performance
-
-To plot training and validation losses/accuracies:
-
-```bash
-python plot_training.py
-```
-
-This will display a plot comparing the performance of the models during training and validation.
-
-### GradCAM Visualization
-
-To generate GradCAM visualizations for a sample image in the validation set:
-
-```bash
-python gradcam.py
-```
-
-This will:
-- Select a sample image from the validation set.
-- Generate a GradCAM heatmap to highlight the regions of the image that contributed the most to the model's prediction.
-- Save the GradCAM visualization as `gradcam_taskE.png`.
-
 ## Code Structure
 
 ```
-/data
-    /train                # Training images
-    /val                  # Validation images
-    train.csv             # Training CSV file with image paths and labels
-    val.csv               # Validation CSV file with image paths and labels
-/train.py                # Script to train the models
-/plot_training.py        # Script to plot training and validation metrics
-/gradcam.py              # Script to generate and visualize GradCAM
+/data/raw
+        /train           # Training images
+        /val             # Validation images
+        train.csv        # Training CSV file with image paths and labels
+        val.csv          # Validation CSV file with image paths and labels
+/src/
+    train.py             # Script to train the models
+/src/
+    plot_training.py     # Script to plot training and validation metrics
 /models                  # Contains pre-trained models and custom network definitions
-/utils                   # Helper functions for data loading, preprocessing, etc.
 ```
 
 ## Model Architecture
@@ -140,9 +118,6 @@ Ensemble learning is applied to the models, combining their predictions using tw
 
 Cohen’s Kappa score is used to evaluate the performance of the ensemble predictions.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
@@ -151,6 +126,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - scikit-learn for machine learning utilities like Kappa score.
 - GradCAM for model interpretability.
 
----
-
-Feel free to modify this template as needed, especially with your actual repository links, dataset, and any other specifics you would like to highlight.
