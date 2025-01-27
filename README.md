@@ -13,6 +13,10 @@ The project uses deep convolutional neural networks (CNNs) to predict the severi
 - **GradCAM**: Visualizing model predictions to understand what parts of the image are being used by the model.
 - **Training Logs and Visualization**: Detailed logs and plots of training and validation losses and accuracies.
 
+- 
+![ModelResult](diabetic-retinopathy-detection/src
+/attention_model_results.png)
+
 ## Requirements
 
 - Python 3.6+
