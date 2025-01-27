@@ -14,8 +14,7 @@ The project uses deep convolutional neural networks (CNNs) to predict the severi
 - **Training Logs and Visualization**: Detailed logs and plots of training and validation losses and accuracies.
 
 - 
-![ModelResult](diabetic-retinopathy-detection/src
-/attention_model_results.png)
+![ModelResult](diabetic-retinopathy-detection/src/attention_model_results.png)
 
 ## Requirements
 
